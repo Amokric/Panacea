@@ -1,0 +1,260 @@
+<model name="second gol example" epochs="100">
+
+    <modelParameters>
+
+
+    </modelParameters>
+
+    <grids>
+
+        <gridIndex>
+
+            <grid ref="ObjectGrid2D" module="panacea.core.Grid" class="ObjectGrid2D"/>
+
+        </gridIndex>
+
+        <modelGrids>
+
+            <grid type="ObjectGrid2D">
+
+                <parameters>
+                    <parameter name="xsize" value="3"/>
+                    <parameter name="ysize" value="3"/>
+                    <parmater name="name" value="golgrid"/>
+                </parameters>
+
+            </grid>
+
+
+        </modelGrids>
+
+    </grids>
+
+    <helpers>
+
+        <helperIndex>
+
+            <helper ref="GOLR" module="panacea.examples.gameOfLife.GameOfLife" class="GameOfLifeRenderer"/>
+
+        </helperIndex>
+
+        <modelHelpers>
+
+            <helper type="GOLR">
+
+                <parameters>
+
+
+                </parameters>
+
+            </helper>
+
+        </modelHelpers>
+
+    </helpers>
+
+    <agents>
+        <agentIndex>
+
+            <agent ref="GOLCell" module="panacea.examples.gameOfLife.GameOfLife" class="GOLCell"/>
+
+        </agentIndex>
+
+        <modelAgents>
+
+            <!-- Agent 1 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="0"/>
+                        <coordinate name="y" value="0"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 2 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="0"/>
+                        <coordinate name="y" value="1"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 3 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="0"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="0"/>
+                        <coordinate name="y" value="2"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 4 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="1"/>
+                        <coordinate name="y" value="0"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 5 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="0"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="1"/>
+                        <coordinate name="y" value="1"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 6 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="0"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="1"/>
+                        <coordinate name="y" value="2"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 7 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="0"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="2"/>
+                        <coordinate name="y" value="0"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 8 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="0"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="2"/>
+                        <coordinate name="y" value="1"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <!-- Agent 9 -->
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="0"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="2"/>
+                        <coordinate name="y" value="2"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+
+        </modelAgents>
+
+    </agents>
+
+
+</model>

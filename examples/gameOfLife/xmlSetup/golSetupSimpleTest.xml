@@ -1,0 +1,71 @@
+<model name="game of life example" epochs="100">
+
+    <modelParameters>
+
+
+    </modelParameters>
+
+    <grids>
+
+        <gridIndex>
+
+            <grid ref="NumericalGrid2D" module="panacea.core.Grid" class="NumericalGrid2D"/>
+            <grid ref="ObjectGrid2D" module="panacea.core.Grid" class="ObjectGrid2D"/>
+
+        </gridIndex>
+
+        <modelGrids>
+
+            <grid type="ObjectGrid2D">
+
+                <parameters>
+                    <parameter name="xsize" value="100"/>
+                    <parameter name="ysize" value="100"/>
+                    <parmater name="name" value="golgrid"/>
+                </parameters>
+
+            </grid>
+
+
+        </modelGrids>
+
+    </grids>
+
+    <agents>
+        <agentIndex>
+
+            <agent ref="GOLCell" module="panacea.examples.gameOfLife.GameOfLife" class="GOLCell"/>
+
+        </agentIndex>
+
+        <modelAgents>
+
+            <agent type="GOLCell">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <parameter name="state" value="0"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="golgrid">
+                        <coordinate name="x" value="5"/>
+                        <coordinate name="y" value="7"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+
+
+
+        </modelAgents>
+
+    </agents>
+
+
+</model>

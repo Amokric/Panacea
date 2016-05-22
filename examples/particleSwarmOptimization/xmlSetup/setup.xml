@@ -1,0 +1,300 @@
+<model name="particle swarm optimization example" epochs="100">
+
+    <modelParameters>
+
+        <parameter name="food location x" value="50" />
+        <parameter name="food location y" value="60" />
+
+    </modelParameters>
+
+    <grids>
+
+        <gridIndex>
+
+            <grid ref="ObjectGrid2D" module="panacea.core.Grid" class="ObjectGrid2D"/>
+
+        </gridIndex>
+
+        <modelGrids>
+
+            <grid type="ObjectGrid2D">
+
+                <parameters>
+                    <parameter name="xsize" value="100"/>
+                    <parameter name="ysize" value="100"/>
+                    <parmater name="name" value="psogrid"/>
+                </parameters>
+
+            </grid>
+
+        </modelGrids>
+
+    </grids>
+
+    <helpers>
+
+        <helperIndex>
+
+            <helper ref="PSOR" module="panacea.examples.particleSwarmOptimization.ParticleSwarmOptimization"
+                    class="ParticleSwarmOptimizationRenderer"/>
+
+        </helperIndex>
+
+        <modelHelpers>
+
+            <helper type="PSOR">
+
+                <parameters>
+
+
+                </parameters>
+
+            </helper>
+
+        </modelHelpers>
+
+    </helpers>
+
+    <agents>
+
+        <agentIndex>
+
+            <agent ref="PSOAgent" module="panacea.examples.particleSwarmOptimization.ParticleSwarmOptimization" class="PSOAgent"/>
+
+        </agentIndex>
+
+        <modelAgents>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="10"/>
+                        <coordinate name="y" value="10"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="20"/>
+                        <coordinate name="y" value="20"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="20"/>
+                        <coordinate name="y" value="20"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="40"/>
+                        <coordinate name="y" value="40"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="80"/>
+                        <coordinate name="y" value="80"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="13"/>
+                        <coordinate name="y" value="17"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="23"/>
+                        <coordinate name="y" value="48"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="60"/>
+                        <coordinate name="y" value="79"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="93"/>
+                        <coordinate name="y" value="12"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+             <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="43"/>
+                        <coordinate name="y" value="18"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+             <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="11"/>
+                        <coordinate name="y" value="19"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+             <agent type="PSOAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="psogrid">
+                        <coordinate name="x" value="32"/>
+                        <coordinate name="y" value="19"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+        </modelAgents>
+
+    </agents>
+
+</model>

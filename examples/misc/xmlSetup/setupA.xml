@@ -1,0 +1,161 @@
+<model name="idle example" epochs="100">
+
+    <modelParameters>
+
+
+    </modelParameters>
+
+    <grids>
+
+        <gridIndex>
+
+            <grid ref="NumericalGrid2D" module="panacea.core.Grid" class="NumericalGrid2D"/>
+            <grid ref="ObjectGrid2D" module="panacea.core.Grid" class="ObjectGrid2D"/>
+
+        </gridIndex>
+
+        <modelGrids>
+
+            <grid type="ObjectGrid2D">
+
+                <parameters>
+                    <parameter name="xsize" value="123"/>
+                    <parameter name="ysize" value="321"/>
+                    <parmater name="name" value="gridA"/>
+                </parameters>
+
+            </grid>
+
+            <grid type="ObjectGrid2D">
+
+
+                <parameters>
+                    <parameter name="xsize" value="200"/>
+                    <parameter name="ysize" value="250"/>
+                    <parmater name="name" value="gridB"/>
+                </parameters>
+
+
+            </grid>
+
+
+        </modelGrids>
+
+    </grids>
+
+    <helpers>
+
+        <helperIndex>
+
+            <helper ref="IdleHelper" module="panacea.examples.misc.ModelA" class="IdleHelper"/>
+
+        </helperIndex>
+
+        <modelHelpers>
+
+            <helper type="IdleHelper">
+
+                <parameters>
+
+                    <parameter name="dummy" value="dummy" />
+                    <parameter name="dummyB" value="anotherDummy" />
+
+                </parameters>
+
+            </helper>
+
+        </modelHelpers>
+
+    </helpers>
+
+    <agents>
+        <agentIndex>
+
+            <agent ref="IdleAgent" module="panacea.examples.misc.ModelA" class="IdleAgent"/>
+
+        </agentIndex>
+
+        <modelAgents>
+
+            <agent type="IdleAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <paramter name="tag" value="tagA"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="gridA">
+                        <coordinate name="x" value="0"/>
+                        <coordinate name="y" value="0"/>
+                    </gridPosition>
+
+                    <gridPosition grid="gridB">
+                        <coordinate name="x" value="2"/>
+                        <coordinate name="y" value="3"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="IdleAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <paramter name="tag" value="tagB"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="gridA">
+                        <coordinate name="x" value="1"/>
+                        <coordinate name="y" value="5"/>
+                    </gridPosition>
+
+                    <gridPosition grid="gridB">
+                        <coordinate name="x" value="7"/>
+                        <coordinate name="y" value="8"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+            <agent type="IdleAgent">
+
+                <parameters>
+
+                    <paramter name="radius" value="1"/>
+                    <paramter name="tag" value="tagC"/>
+
+                </parameters>
+
+                <gridPositions>
+
+                    <gridPosition grid="gridA">
+                        <coordinate name="x" value="1"/>
+                        <coordinate name="y" value="5"/>
+                    </gridPosition>
+
+                    <gridPosition grid="gridB">
+                        <coordinate name="x" value="9"/>
+                        <coordinate name="y" value="10"/>
+                    </gridPosition>
+
+                </gridPositions>
+
+            </agent>
+
+
+        </modelAgents>
+
+    </agents>
+
+
+</model>
