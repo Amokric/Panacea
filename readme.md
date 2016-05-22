@@ -45,8 +45,12 @@ All tests are contained in /tests.
 ## Contributors
 
 Dario Panada
+
+
 MRes in Advanced Computer Science Candidate
+
 The University of Manchester (UK)
+
 dario.panada@postgrad.manchester.ac.uk
 
 ## License
